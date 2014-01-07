@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import receiver.lockScreenReeiver;
-
 public class MyService extends Service {
     BroadcastReceiver mReceiver;
 
@@ -29,7 +27,7 @@ public class MyService extends Service {
         IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
 
-        mReceiver = new lockScreenReeiver();
+        mReceiver = new LockScreenReceiver();
         registerReceiver(mReceiver, filter);
 
         super.onCreate();
