@@ -8,7 +8,7 @@ public class StartLockScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startService(new Intent(this, MyService.class));
+        startService(new Intent(this, ScreenService.class));
         finish();
     }
 

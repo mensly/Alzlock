@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 
 public class LockScreenReceiver extends BroadcastReceiver {
-    public static boolean wasScreenOn = true;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -13,12 +12,9 @@ public class LockScreenReceiver extends BroadcastReceiver {
         boolean launch = false;
 
         if (action.equals(Intent.ACTION_SCREEN_OFF)) {
-            wasScreenOn = false;
             launch = true;
-        } else if (action.equals(Intent.ACTION_SCREEN_ON)) {
-            wasScreenOn = true;
         } else if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
-            context.startService(new Intent(context, MyService.class));
+            context.startService(new Intent(context, ScreenService.class));
             launch = true;
         }
 

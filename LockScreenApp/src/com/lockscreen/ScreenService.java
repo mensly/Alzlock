@@ -9,7 +9,7 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
-public class MyService extends Service {
+public class ScreenService extends Service {
     BroadcastReceiver mReceiver;
 
     @Override
@@ -34,7 +34,7 @@ public class MyService extends Service {
         Notification notification = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(getText(R.string.app_name))
-                .setContentText("This phone has Alzheimer's disease.")
+                .setContentText(getText(R.string.notif_text))
                 .build();
         startForeground(5418, notification);
 
