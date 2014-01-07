@@ -18,13 +18,15 @@ public class LockScreenReceiver extends BroadcastReceiver {
         } else if (action.equals(Intent.ACTION_SCREEN_ON)) {
             wasScreenOn = true;
         } else if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
+            context.startService(new Intent(context, MyService.class));
             launch = true;
         }
 
         if (launch) {
-            Intent intent11 = new Intent(context, LockScreenAppActivity.class);
-            intent11.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent11);
+            Intent goHome = new Intent(Intent.ACTION_MAIN);
+            goHome.addCategory(Intent.CATEGORY_HOME);
+            goHome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(goHome);
         }
 
     }
