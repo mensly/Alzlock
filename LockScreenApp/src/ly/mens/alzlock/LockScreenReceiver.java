@@ -1,4 +1,4 @@
-package com.lockscreen;
+package ly.mens.alzlock;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

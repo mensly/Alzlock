@@ -1,4 +1,4 @@
-package com.lockscreen;
+package ly.mens.alzlock;
 
 import android.app.KeyguardManager;
 import android.app.Notification;
