@@ -12,7 +12,7 @@ launcher application, such as the [ZGPAX S5][2].
 The apk can be downloaded [here][1] (Google Play entry coming... eventually)
 
 
-Also [Flappy Bird varient][3]
+Also [Flappy Bird variant][3]
 
 
  [1]: http://mens.ly/files/Alzlock.apk
