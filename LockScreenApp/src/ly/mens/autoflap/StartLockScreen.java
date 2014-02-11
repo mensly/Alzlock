@@ -1,4 +1,4 @@
-package ly.mens.alzlock;
+package ly.mens.autoflap;
 
 import android.app.Activity;
 import android.content.Intent;

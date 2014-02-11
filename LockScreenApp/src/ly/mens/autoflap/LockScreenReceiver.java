@@ -1,4 +1,4 @@
-package ly.mens.alzlock;
+package ly.mens.autoflap;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -19,10 +19,14 @@ public class LockScreenReceiver extends BroadcastReceiver {
         }
 
         if (launch) {
-            Intent goHome = new Intent(Intent.ACTION_MAIN);
-            goHome.addCategory(Intent.CATEGORY_HOME);
-            goHome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(goHome);
+            Intent flapBird = context.getPackageManager()
+                .getLaunchIntentForPackage("com.dotgears.flappybird");
+            if (flapBird != null)
+            {
+                flapBird.addCategory(Intent.CATEGORY_LAUNCHER);
+                flapBird.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(flapBird);
+            }
         }
 
     }
